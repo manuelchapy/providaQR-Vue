@@ -658,10 +658,10 @@ export default {
     let examenes = ref(null);
     let cultivos = ref([]);
     let enviar = {
-      qr: "http://192.168.1.30:8081/resultado/" + this.id,
+      qr: "https://providaqr-vue.herokuapp.com/factura/" + this.id,
     };
 
-    const ip = "http://192.168.1.64:5000/";
+    const ip = "https://provida-qr.herokuapp.com/";
 
     const columns_pagos = [
       {

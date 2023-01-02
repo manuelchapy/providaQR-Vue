@@ -153,7 +153,7 @@ export default {
 
   data() {
     let enviar = {
-      qr: "http://192.168.1.30:8081/factura/" + this.id,
+      qr: "https://providaqr-vue.herokuapp.com/factura/" + this.id,
     };
 
     let rows_tabla = ref([]);
@@ -185,7 +185,7 @@ export default {
     let total_pagar_pesos;
     let cambio_bs;
 
-    const ip = "http://192.168.1.64:5000/";
+    const ip = "https://provida-qr.herokuapp.com/";
 
     const columns_tabla = [
       {
