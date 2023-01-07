@@ -57,6 +57,20 @@
                 </q-table>
               </div>
             </div>
+            <div class="row q-mt-xs">
+              <div class="col-12">
+                <q-table
+                  :rows="rows_pacientes"
+                  :columns="columns_pacientes"
+                  row-key="cedula"
+                  :hide-pagination="true"
+                  class="tabla-factura"
+                  dense
+                  :pagination="initialPagination"
+                >
+                </q-table>
+              </div>
+            </div>
             <div class="row">
               <div class="col-12 col-md-3" style="border: 1px solid #000">
                 Total examenes: {{ this.cantidad }}
@@ -157,6 +171,7 @@ export default {
     };
 
     let rows_tabla = ref([]);
+    let rows_pacientes=ref([]);
     let igtf_bs;
     let igtf_dolares;
     let igtf_pesos;
@@ -220,6 +235,25 @@ export default {
           Number(
             Math.round(row.item.subtotal * this.cambio_bs + "e+2") + "e-2"
           ),
+        sortable: true,
+      },
+    ];
+
+    const columns_pacientes = [
+      {
+        name: "cedula",
+        align: "left",
+        label: "Cedula",
+        field: (row) => row.paciente_cedula,
+        sortable: true,
+      },
+      {
+        name: "nombre",
+        align: "right",
+        label: "Nombre",
+        field: (row) =>{
+          return row.paciente_nombre + ' ' + row.paciente_apellido
+        },
         sortable: true,
       },
     ];
@@ -289,12 +323,14 @@ export default {
         sortBy: "desc",
         descending: false,
         page: 1,
-        rowsPerPage: 5,
+        rowsPerPage: none,
       },
       ip,
       enviar,
       rows_tabla,
+      rows_pacientes,
       columns_tabla,
+      columns_pacientes,
       igtf_bs,
       igtf_dolares,
       igtf_pesos,
