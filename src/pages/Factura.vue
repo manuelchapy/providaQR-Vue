@@ -249,7 +249,7 @@ export default {
       },
       {
         name: "nombre",
-        align: "right",
+        align: "left",
         label: "Nombre",
         field: (row) =>{
           return row.paciente_nombre + ' ' + row.paciente_apellido
