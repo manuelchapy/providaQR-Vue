@@ -287,6 +287,7 @@ export default {
         this.fecha_factura = response.data.fecha_creacion;
         this.fecha_orden_trabajo = response.data.fecha_creacion_orden_trabajo;
         this.rows_tabla = response.data.items;
+        this.rows_pacientes= response.data.pacientes;
         this.numero_factura = response.data.numero_factura;
         this.orden_trabajo = response.data.orden_trabajo;
         this.ordenes = response.data.ordenes;
