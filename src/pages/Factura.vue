@@ -323,7 +323,7 @@ export default {
         sortBy: "desc",
         descending: false,
         page: 1,
-        rowsPerPage: none,
+        rowsPerPage: 0,
       },
       ip,
       enviar,
