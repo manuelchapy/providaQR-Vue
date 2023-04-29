@@ -5,16 +5,16 @@
       <q-card-section class="q-pb-none">
         <div class="row">
           <div class="col-12 text-center">
-            <img
+            <!--<img
               src="../assets/logo.png"
               style="width: 40vw; height: 20vw"
               alt=""
-            />
+            />-->
           </div>
           <div class="col-12 col-md-8">
             <div class="row text-subtitle1">
               <div class="col-12">
-                Laboratorio Clinico PROVIDA C.A. |
+               <!-- Laboratorio Clinico PROVIDA C.A. |-->
                 <span class="text-bold"
                   >Orden {{ this.paciente.numero_orden }}</span
                 >
@@ -612,15 +612,15 @@
 
       <q-card-section>
         <div class="row text-body2">
-          <div class="col-12">
+          <!--<div class="col-12">
             Provida 1: Av. Lucio Oquendo, Qta. Saimi N° 5-60, La Concordia. Tel:
             0276-3465389
             <br />
             Provida 2: Calle Albarico con Av. Francisco Cardenas, Barrio Obrero
             sector El Cafetal. Tel: 0414-0757356
-          </div>
+          </div>-->
           <!----<div class="col-12 text-subtitle1">
-            <div class="row justify-end">
+            <div class="row justify-end"> 
               <div class="col-1">Lcdo.</div>
               <template v-for="firma in firmas" :key="firma.id_usuario">
                 <div class="col-2" v-if="firma.id_usuario == 19">
